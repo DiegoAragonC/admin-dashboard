@@ -1,7 +1,7 @@
 .container {
     display: grid;
     grid-template-columns: 450px 1fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 250px 1fr;
 }
 
 .sidebar {
@@ -36,9 +36,16 @@
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: auto auto;
     grid-template-rows: 1fr 1fr;
     padding: 25px;
+    row-gap: 16px;
+    box-shadow: 0px 10px 5px lightcoral;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
 }
 
 .search-bar input[type="text"] {
@@ -49,16 +56,49 @@
 }
 
 .user-alerts {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-evenly
+}
+
+.user-alerts .user-pic, .user-alerts .bell {
+    height: 80%;
 }
 
 .user-pic {
     border-radius: 50%;
 }
 
-.user-info img, .user-info p {
-    display: inline;
+.user-info {
+    display: flex;
+    gap: 24px;
+
+}
+
+.user-info div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-info p {
+    margin: 5px;
+}
+
+.user-info .user-pic {
+    width: 128px;
+}
+
+/*.user-image {
+    flex-shrink: 0;
+}*/
+
+.username {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.user-info .username {
+    font-size: 32px;
 }
  
 .main-content {
@@ -68,7 +108,7 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-    padding: 32px;
+    padding: 24px;
 }
 
 .projects {
@@ -92,12 +132,40 @@
     border-color: rgb(120, 180, 200);
     border-style: solid;
     border-width: 0px 0px 0px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 6px 10px 3px lightcoral;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: right;
 }
 
 .box {
     background-color:  rgb(255, 250, 240);
     padding: 15px;
     border-radius: 12px;
+    box-shadow: 6px 10px 5px lightcoral;
+}
+
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.buttons button {
+    font-size: 18px;
+    width: 120px;
+    height: 32px;
+    background-color: steelblue;
+    color: rgb(255, 250, 240);
+    border: none;
+    border-radius: 16px;
 }
 
 
